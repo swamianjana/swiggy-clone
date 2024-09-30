@@ -42,7 +42,7 @@ export default function Restaurent() {
       };
     
 
-      const swiggyBackendUrl = process.env.SWIGGY_BACKEND_URL ||  'http://localhost:8080';
+      const swiggyBackendUrl = process.env.SWIGGY_BACKEND_URL ||  'https://swiggy-backend-red.vercel.app' || 'http://localhost:8080';
 
 
     const fetchRestaurent = () => {

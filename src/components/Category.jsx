@@ -8,7 +8,7 @@ export default function Category() {
 
     const containerRef = useRef(null);
     const scrollAmount = 1000; // Amount to scroll per arrow key press
-    const swiggyBackendUrl = process.env.SWIGGY_BACKEND_URL ||  'http://localhost:8080';
+    const swiggyBackendUrl = process.env.SWIGGY_BACKEND_URL || 'https://swiggy-backend-red.vercel.app' ||  'http://localhost:8080';
     const handleKeyDown = (event) => {
         console.log("called handelKeyDown", event.key , containerRef.current);
 
