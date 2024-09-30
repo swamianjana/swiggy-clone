@@ -42,14 +42,14 @@ export default function Restaurent() {
       };
     
 
-
+      const swiggyBackendUrl = process.env.SWIGGY_BACKEND_URL ||  'http://localhost:8080';
 
 
     const fetchRestaurent = () => {
 
         var config = {
             method: 'get',
-            url: 'http://localhost:8080/restaurent/all',
+            url: `${swiggyBackendUrl}/restaurent/all`,
             headers: {}
         };
 
@@ -69,7 +69,7 @@ export default function Restaurent() {
 
     function renderRestaurent(restaurent) {
         console.log("restaurent", restaurent);
-        const imageUrl = `http://localhost:8080/images/${restaurent.image}`;
+        const imageUrl = `${swiggyBackendUrl}/images/${restaurent.image}`;
         // const imageUrl = {"http://localhost:8080/images/"+props.image};
         
         return (

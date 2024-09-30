@@ -8,7 +8,7 @@ export default function Category() {
 
     const containerRef = useRef(null);
     const scrollAmount = 1000; // Amount to scroll per arrow key press
-  
+    const swiggyBackendUrl = process.env.SWIGGY_BACKEND_URL ||  'http://localhost:8080';
     const handleKeyDown = (event) => {
         console.log("called handelKeyDown", event.key , containerRef.current);
 
@@ -38,10 +38,10 @@ export default function Category() {
   
 
     const fetchCategories = () => {
-
+            
         var config = {
             method: 'get',
-            url: 'http://localhost:8080/category/all',
+            url: `${swiggyBackendUrl}/category/all`,
             headers: {}
         };
 
@@ -58,7 +58,7 @@ export default function Category() {
     const fetchImages = (imageName) => {
         var config = {
             method: 'get',
-            url: `localhost:8080/images/${imageName}`,
+            url: `${swiggyBackendUrl}/${imageName}`,
             headers: {}
         };
 
@@ -84,7 +84,7 @@ export default function Category() {
 
     function renderCategories(category) {
         console.log("category", category);
-        const imageUrl = `http://localhost:8080/images/${category.image}`;
+        const imageUrl = `${swiggyBackendUrl}/images/${category.image}`;
         return (
             <div className="w-[144px] h-[188px] flex-shrink-0">
 
