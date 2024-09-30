@@ -84,7 +84,8 @@ export default function Category() {
 
     function renderCategories(category) {
         console.log("category", category);
-        const imageUrl = `${swiggyBackendUrl}/images/${category.image}`;
+       // const imageUrl = `${swiggyBackendUrl}/images/${category.image}`;
+        const imageUrl = `/images/${category.image}`;
         return (
             <div className="w-[144px] h-[188px] flex-shrink-0">
 

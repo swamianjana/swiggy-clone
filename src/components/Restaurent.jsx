@@ -69,8 +69,10 @@ export default function Restaurent() {
 
     function renderRestaurent(restaurent) {
         console.log("restaurent", restaurent);
-        const imageUrl = `${swiggyBackendUrl}/images/${restaurent.image}`;
+       // const imageUrl = `${swiggyBackendUrl}/images/${restaurent.image}`;
         // const imageUrl = {"http://localhost:8080/images/"+props.image};
+        const imageUrl = `/images/${restaurent.image}`;
+        
         
         return (
            
